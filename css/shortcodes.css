@@ -965,6 +965,7 @@ i.fa-play{ padding-left: 5px; }
     -moz-box-shadow: 0 0 12px 0 rgba(0,0,0,.1);
        box-shadow: 0 0 10px 0 rgb(43 52 59 / 18%);
     border-radius: 10px;
+        height: 275px;
 }
 .featured-icon-box.style3 .ttm-icon i {
     font-size: 50px;
