@@ -55,7 +55,7 @@
 	    padding: 25px 0;
 	}
 	.ttm-header-style-02 .widget_info:not(:first-child) {
-	    padding-left: 70px;
+	    padding-left: 40px;
 	}
 	.ttm-header-style-02 .widget_info:first-child:after { content: unset; }
 	.ttm-header-style-02 #site-header-menu .site-navigation ul.menu > li >a { padding: 23px 15px; }
@@ -122,9 +122,9 @@
 
 	.ttm-header-style-01 #site-header-menu{ ackground-color: transparent; }
 
-	.ttm-header-style-02 #site-header-menu .menubar { position: absolute; top: -87px; }
+	.ttm-header-style-02 #site-header-menu .menubar { position: absolute; top: 0px; }
 	.ttm-header-style-02 .menubar-inner, .ttm-header-style-02 .menubar-inner:after,
-	.ttm-header-style-02 .menubar-inner:before { background-color: #fff; }
+	.ttm-header-style-02 .menubar-inner:before { background-color: #000000; }
 
 	.first-footer .widget-area:not(:last-child) .widget:after {
 	    right: 10px;
