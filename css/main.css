@@ -924,7 +924,8 @@ nav.main-menu, .header_search .header_search_content {
     border-right-color: #c3002f;
 }
 .auto_size_1{
-    height: 550px;
+    /* height: 550px; */
+  border-radius: 10px;
 }
 
 
@@ -1770,7 +1771,12 @@ ul.social-icons{
 /** SiteNavigation(Menu) **/
 .site-navigation {
     position: relative;
-    z-index: 2;
+    z-index: 1;
+}
+html.lightbox-open,
+body.lightbox-open {
+  overflow: hidden !important;
+  height: 100%;
 }
 nav.main-menu ul {
     position: relative;
@@ -1962,6 +1968,7 @@ nav.main-menu .megamenu-content .title{
     position: relative;
     z-index: 1;
     transition: all 0.5s ease;
+  text-align: start !important;
 }
 .slide .slide__content--headings h2 {
     line-height: 75px;
@@ -2015,6 +2022,7 @@ nav.main-menu .megamenu-content .title{
     font-weight: 500;
     font-size: 80px;
     margin-bottom: 25px;
+    text-align: start;
 }
 .banner_slider_2 .slide .slide__content--headings h2.border_text {
     line-height: 170px;
@@ -2022,6 +2030,7 @@ nav.main-menu .megamenu-content .title{
     font-weight: 400;
     margin-bottom: 0;
     font-size: 160px;
+    text-align: start;
 }
 .banner_slider_2 .slide .slide__content--headings > span.border_text {
     line-height: 80px;
@@ -2092,6 +2101,7 @@ nav.main-menu .megamenu-content .title{
 
 
 }
+
 @media only screen and (max-width: 1024px){
   .banner_slider .slide {
       height: 460px;
@@ -2197,14 +2207,47 @@ nav.main-menu .megamenu-content .title{
     background-size: cover;
     background-position: center;
 }
-.banner_slider .slide_img {
+/* .banner_slider .slide_img {
     position: absolute;
     width: 100%;
     height: 100%;
     background-position: center;
     background-size: cover;
+} */
+/* ==============================
+   HERO SLIDE IMAGE ANIMATION
+================================ */
+
+.banner_slider .slide {
+    position: relative;
+    overflow: hidden;
 }
-.slick-active .slide_img {
+
+/* Background Image */
+.banner_slider .slide_img {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+    animation: heroZoomInOut 16s ease-in-out infinite;
+    will-change: transform; /* smooth performance */
+}
+
+/* 🔁 Infinite Zoom In & Zoom Out */
+@keyframes heroZoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* .slick-active .slide_img {
     -webkit-animation-delay: 24s;
     -moz-animation-delay: 24s;
     -o-animation-delay: 24s;
@@ -2222,7 +2265,7 @@ nav.main-menu .megamenu-content .title{
   8% { transform: scale(1.02); animation-timing-function: ease-out; }
   17% { transform: scale(1.04); animation-timing-function: ease-out; }
   22% { transform: scale(1.02); } 25% { -transform: scale(1.1); }
-}
+} */
 
 
 
@@ -2448,7 +2491,7 @@ ul.widget_contact_wrapper li i{
 .newsletter_widget { padding: 0 !important; }
 .newsletter_widget .newsletter-form { position: relative; }
 .newsletter_widget .newsletter-form input {
-    width: 38.5%;
+    width: 26%;
     float: left;
     padding: 18px 20px;
     line-height: 24px;
@@ -2550,25 +2593,68 @@ ul.footer-nav-menu li:last-child:after{
 }
 
 
-/* ===============================================
-    Page-Title-Row
-------------------------*/
-.ttm-page-title-row { 
-    background: url(../images/pagetitle-bg.jpg);
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-}
-.ttm-page-title-row.ttm-bg.ttm-bgimage-yes >.ttm-bg-layer{
-    opacity: .79;
-}
-.ttm-page-title-row-inner { 
-    width: 100%;
-    text-align: center;
+/* ===============================
+   PAGE TITLE BACKGROUND SECTION
+================================ */
+
+.ttm-page-title-row {
     position: relative;
-    padding: 75px 0;
+    overflow: hidden;
+    z-index: 0;
 }
+
+/* 🔁 Background Image with Infinite Zoom */
+.ttm-page-title-row::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(../images/pagetitle-bg.jpg) center center / cover no-repeat;
+    animation: bgZoomInOut 16s ease-in-out infinite;
+    z-index: -2;
+}
+
+/* 🌑 Soft Dark Gradient Overlay (Light & Premium) */
+.ttm-page-title-row::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.18) 0%,
+        rgba(0, 0, 0, 0.12) 45%,
+        rgba(0, 0, 0, 0.08) 100%
+    );
+    z-index: -1;
+}
+
+/* ❌ Remove Theme Default Dark Overlay */
+.ttm-page-title-row .ttm-bg-layer {
+    background: #100f0fad !important;
+    opacity: 1 !important;
+}
+
+/* 📄 Content Above Background */
+.ttm-page-title-row-inner {
+    position: relative;
+    z-index: 2;
+    padding: 75px 0;
+    text-align: center;
+}
+
+/* 🔁 Zoom In Zoom Out Animation */
+@keyframes bgZoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
 .page-title-heading h2 {
     text-transform: capitalize;
     font-weight: 700;
@@ -2994,7 +3080,9 @@ article.ttm-blog-single .ttm-blog-single-content {
     line-height: 32px;
     margin-bottom: 0;
 }
-
+.footer .footer-logo img{
+        background: #232324;
+}
 
 /*------------------------------------------------------------------------------*/
 /*  Error_page
@@ -3021,3 +3109,277 @@ section.error-404 .page-content p { font-size: 18px; margin-bottom: 30px; }
 /*  Map
 /*------------------------------------------------------------------------------*/   
 #map { display: block; height: 550px; width: 100%; }
+
+/* Heading Style */
+.main-heading {
+    text-align: center;
+    color: #007bff; /* Primary Blue */
+    margin-bottom: 50px;
+    font-size: 2.2em;
+    font-weight: 600;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 15px;
+}
+
+/* Horizontal Box Layout using Flexbox */
+.featured-reviews-grid {
+    display: flex;
+    justify-content: space-between; /* Space out the boxes */
+    gap: 30px; /* Gap between the boxes */
+    flex-wrap: wrap; /* Ensures responsiveness if the screen is small */
+  margin-bottom:30px;
+}
+
+.feature-box {
+    /* Each box takes up one-third of the space */
+    flex: 1 1 30%; /* 1 1 30%: flex-grow, flex-shrink, basis */
+    min-width: 300px; /* Minimum size for small screens */
+    
+    /* Box Design */
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures image corners are clipped */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    display: block;
+}
+
+.box-content {
+    padding: 20px;
+}
+
+.product-title {
+    color: #000; /* Green title */
+    font-size: 1.4em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #6c757d;
+}
+
+/* Star Rating Style */
+.star-rating {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 2px;
+}
+  .star-rating i {
+    color:#bbbb1c;
+  }
+
+/* Use Unicode stars or CSS shapes. Here we use CSS colored blocks for simplicity and no external icons */
+.star-filled, .star-empty {
+    width: 20px;
+    height: 20px;
+    font-size: 1.2em;
+    line-height: 1;
+    display: inline-block;
+}
+
+.star-filled::after {
+    content: "★"; /* Filled star Unicode */
+    color: gold;
+}
+
+.star-empty::after {
+    content: "★"; /* Empty star, but grey color makes it look empty */
+    color: #ced4da; /* Light grey */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 992px) {
+    .featured-reviews-grid {
+        justify-content: center;
+        gap: 20px;
+    }
+    .feature-box {
+        flex: 1 1 calc(50% - 20px); /* 2 boxes per row on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .feature-box {
+        flex: 1 1 100%; /* 1 box per row on phones */
+    }
+}
+  
+  .hero-points{
+          display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+  #gallery {
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+/* Lightbox */
+.gallery-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999; /* HEADER SE UPAR */
+}
+.gallery-lightbox img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 25px;
+  right: 30px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000000;
+}
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.lightbox-prev { left: 30px; }
+.lightbox-next { right: 30px; }
+
+.lightbox-prev svg,
+.lightbox-next svg {
+    width: 26px;
+    height: 26px;
+    stroke: #fff;
+    stroke-width: 3;
+    fill: none;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(255,255,255,0.3);
+}
+/* ===== SERVICE FLOW ===== */
+.service-flow{
+    position:absolute;
+    top:135px;          /* 🔥 yahi main fix hai */
+    left:0;
+    width:100%;
+    pointer-events:none;
+    z-index:1;
+}
+
+.service-flow img{
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.procedure-row{
+    display:flex;
+    flex-wrap:nowrap;   /* 🔥 vertical hone se rokta hai */
+    align-items:flex-start;
+    position:relative;
+}
+.flow-svg{
+    width:100%;
+    height:200px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.flow-icon{
+    position:absolute;
+    top:20px;          /* 🔥 wave ke upar */
+    left:6%;
+    width:36px;
+    height:36px;
+    z-index:999;      /* 🔥 always above image & wave */
+    pointer-events:none;
+    animation: moveIcon 16s ease-in-out infinite;
+}
+.flow-icon svg{
+    width:100%;
+    height:100%;
+    fill:none !important;     /* 🔥 black fill hata deta hai */
+    stroke:#d61f45;
+    stroke-width:2;
+   overflow:visible;
+}
+#flowIcon path{
+    stroke:#d61f45;
+    stroke-width:2;
+    fill:none;
+}
+
+/* mobile hide */
+@media(max-width:991px){
+    .service-flow{display:none;}
+}
+@keyframes moveIcon{
+    0%   { left:6%;  transform:translateY(0); }
+    25%  { left:29%; transform:translateY(-25px); }
+    50%  { left:52%; transform:translateY(15px); }
+    75%  { left:75%; transform:translateY(-20px); }
+    100% { left:92%; transform:translateY(0); } /* ⬅️ END SAFE */
+}
+.featured-imagebox{
+    margin-top:80px;   /* 🔥 wave ke niche */
+    position:relative;
+}
+
+.procedure-section{
+    display: flex;
+}

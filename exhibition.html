@@ -27,194 +27,137 @@
         <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <style>
 /* ===============================
-   MORE THAN FABRIC – BRAND STORY
+   PARTNERING EXPORT SECTION
 ================================ */
 
-.about-wrapper-1 {
-    /* padding: 110px 0; */
-    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+.partner-section {
+    padding: 110px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
 }
 
-.about-story {
-    max-width: 980px;
-    margin: auto;
-    text-align: center;
-}
-
-.about-story h2 {
-    font-size: 44px;
-    font-weight: 800;
-    margin-bottom: 22px;
-}
-
-.about-story h2 span {
-    color: #c3002f;
-}
-
-.about-story p {
-    font-size: 17px;
-    line-height: 1.9;
-    color: #555;
-    margin-bottom: 18px;
-}
-
-/* TAGLINE */
-.about-tagline {
-    font-size: 18px;
-    font-weight: 600;
-    color: #111;
-    margin-top: 20px;
-}
-
-/* QUOTE BOX */
-.about-quote {
-    margin-top: 20px;
-    padding: 55px 60px;
-    background: white;
-    border-radius: 26px;
-    color: #000000;
-    position: relative;
-    /* overflow: hidden; */
-}
-
-.about-quote::before {
-content: "“";
-    position: absolute;
-    top: 50px;
-    left: -8px;
-    font-size: 140px;
-    color: rgba(195, 0, 47, 0.25);
-    font-family: serif;
-}
-
-.about-quote p {
-    font-size: 19px;
-    line-height: 1.8;
-    margin-bottom: 22px;
-    color: #000000;
-}
-
-.about-quote strong {
-    color: #c3002f;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-}
-/* ===============================
-   FABREEN MANIFESTO – CORE PHILOSOPHY
-================================ */
-
-.fabreen-manifesto {
-    padding: 60px 0;
-    background: linear-gradient(135deg, #0b0b0b 0%, #1a1a1a 100%);
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-}
-
-.fabreen-manifesto::after {
-    content: "";
-    position: absolute;
-    bottom: -120px;
-    right: -120px;
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    background: rgba(195, 0, 47, 0.18);
-}
-
-.fabreen-manifesto-inner {
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-/* TOP LABEL */
-.manifesto-label {
+.partner-badge {
     display: inline-block;
-    /* background: rgb(195 0 47 / 26%); */
+    background: rgba(195, 0, 47, 0.1);
     color: #c3002f;
     padding: 7px 18px;
-    border-radius: 30px;
+    border-radius: 40px;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 22px;
-    border: 1px solid #c3002f;
 }
 
-/* TITLE */
-.fabreen-manifesto-inner h2 {
+.partner-title h2 {
     font-size: 46px;
-    font-weight: 800;
-    margin-bottom: 18px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 22px;
 }
 
-.fabreen-manifesto-inner h2 span {
+.partner-title span {
     color: #c3002f;
 }
 
-/* SUB TITLE */
-.manifesto-subtitle {
-    font-size: 18px;
-    font-weight: 600;
-    color: #ddd;
-    margin-bottom: 35px;
-}
-
-/* TAGS */
-.manifesto-tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-    margin-bottom: 40px;
-}
-
-.manifesto-tags span {
-    padding: 10px 22px;
-    border-radius: 40px;
-    border: 1px solid rgba(255,255,255,0.25);
-    font-size: 14.5px;
-    font-weight: 600;
-    color: #fff;
-    transition: all 0.3s ease;
-}
-
-.manifesto-tags span:hover {
-    background: #c3002f;
-    border-color: #c3002f;
-    transform: translateY(-3px);
-}
-
-/* DESCRIPTION */
-.fabreen-manifesto-inner p {
-    font-size: 16.8px;
+.partner-text p {
+    font-size: 16.5px;
     line-height: 1.9;
-    color: #d8d8d8;
+    color: #555;
+    margin-bottom: 18px;
+    max-width: 560px;
+}
+
+/* FEATURE LIST */
+.partner-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 16px 30px;
+    margin-top: 30px;
+}
+
+.partner-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15.5px;
+    font-weight: 500;
+}
+
+.partner-feature i {
+    color: #c3002f;
+    font-size: 18px;
+}
+
+/* IMAGE GRID */
+.partner-images {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 22px;
+}
+
+.partner-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.18);
+}
+
+.partner-images .small-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 22px;
+}
+
+/* HIGHLIGHT CARD */
+.partner-highlight {
+    margin-top: 90px;
+    padding: 70px;
+    background: linear-gradient(135deg, #0f0f0f, #1b1b1b);
+    border-radius: 26px;
+    position: relative;
+    overflow: hidden;
+}
+
+.partner-highlight::after {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(195,0,47,0.15);
+}
+
+.partner-highlight h3 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.partner-highlight span {
+    color: #c3002f;
+}
+
+.partner-highlight p {
+    color: #ddd;
+    font-size: 16.5px;
+    line-height: 1.85;
     max-width: 820px;
-    margin: auto;
 }
 
 /* RESPONSIVE */
-@media(max-width: 768px){
-    .fabreen-manifesto-inner h2 {
-        font-size: 34px;
+@media(max-width: 991px){
+    .partner-title h2 {
+        font-size: 36px;
     }
-    .manifesto-tags span {
-        font-size: 14px;
-        padding: 9px 18px;
+    .partner-features {
+        grid-template-columns: 1fr;
     }
-}
-
-/* RESPONSIVE */
-@media(max-width: 768px){
-    .about-story h2 {
-        font-size: 34px;
-    }
-    .about-quote {
-        padding: 40px 30px;
+    .partner-images {
+        margin-top: 40px;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -324,7 +267,7 @@ content: "“";
                                                         <a href="about-us.html" class="mega-menu-link">About Us</a>
 
                                                     </li>
-                                                    <!-- <li class="mega-menu-item">
+                                                    <li class="mega-menu-item">
                                                         <a href="#" class="mega-menu-link">Services</a>
                                                         <ul class="mega-submenu">
                                                             <li><a href="weaving.html">Weaving</a></li>
@@ -338,7 +281,7 @@ content: "“";
                                                     <li class="mega-menu-item ">
                                                         <a href="gallery.html" class="mega-menu-link">Gallery</a>
 
-                                                    </li> -->
+                                                    </li>
                                                     <!-- <li class="mega-menu-item">
                                                         <a href="#" class="mega-menu-link">Pages</a>
                                                         <ul class="mega-submenu">
@@ -371,9 +314,9 @@ content: "“";
                                                     <!-- <li class="mega-menu-item">
                                                         <a href="review.html">Review</a>
                                                     </li> -->
-                                                      <!-- <li class="mega-menu-item">
+                                                     <li class="mega-menu-item">
                                                     <a href="exhibition.html">Exhibition</a>
-                                                </li> -->
+                                                </li>
                                                     <li class="mega-menu-item">
                                                         <a href="contact-us.html">Contact us</a>
                                                     </li>
@@ -421,13 +364,13 @@ content: "“";
                         <div class="col-lg-12">
                             <div class="ttm-page-title-row-inner">
                                 <div class="page-title-heading">
-                                    <h2 class="title">About Us</h2>
+                                    <h2 class="title">Exhibition</h2>
                                 </div>
                                 <div class="breadcrumb-wrapper">
                                     <span>
-                                        <a title="Homepage" href="index-2.html">Home</a>
+                                        <a title="Homepage" href="index.html">Home</a>
                                     </span>
-                                    <span>About Us</span>
+                                    <span>Exhibition</span>
                                 </div>
                             </div>
                         </div>
@@ -439,238 +382,72 @@ content: "“";
 
             <!--site-main start-->
             <div class="site-main">
-    <section class="about-wrapper">
-    <div class="about-container">
-        <div class="about-grid">
-
-        <div class="about-content">
-            <div class="about-title">
-            <h6>The Western Garment Fabric Studio</h6>
-            <h2>Where Fabric   <span>Meets Innovation</span></h2>
-            </div>
-
-            <p>
-            <strong>FABREEN</strong> is the dedicated fabric studio of The Apple Group, built in 2022,
-            with a singular focus on creating high-quality, fashion-forward textiles for modern
-            Western apparel.
-            </p>
-
-            <p>
-            Based in Surat, India’s textile heartland, FABREEN delivers end-to-end fabric solutions—
-            from concept and design to yarn selection and finished material—through an integrated
-            and technologically advanced manufacturing ecosystem.
-            </p>
-
-            <p>
-            Every fabric developed at FABREEN reflects precision, creativity, and a deep
-            understanding of global fashion needs.
-            </p>
-        </div>
-
-        <div class="about-image">
-            <img src="images/AboutUs1.png" alt="FABREEN Fabric Studio">
-        </div>
-
-        </div>
-    </div>
-    </section>
-    <section class="about-wrapper about-dark">
-    <div class="about-container">
-        <div class="about-grid">
-
-        <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1000&q=80" alt="Founder - FABREEN">
-        </div>
-
-        <div class="about-content">
-            <div class="about-title-1">
-            <h2>The Vision Behind <span>FABREEN</span></h2>
-            </div>
-
-            <p><strong>Crafted by Expertise, Led by Passion</strong></p>
-
-            <p>
-            FABREEN is spearheaded by <strong>Jignesh Sheta</strong>, a textile industry veteran and
-            founder at Apple Lifestyle Industries Limited.
-            </p>
-
-            <p>
-            With hands-on experience in dyed and printed fabric manufacturing since 2004, he brings
-            technical depth, creative insight, and a strong design philosophy to the studio.
-            </p>
-
-            <p>
-            Under his leadership, FABREEN has grown beyond a manufacturing unit into a creative
-            fabric laboratory—where innovation, craftsmanship, and personal commitment shape every
-            meter of textile produced.
-            </p>
-        </div>
-
-        </div>
-    </div>
-    </section>
-    <section class="about-wrapper">
-    <div class="about-container">
-        <div class="about-grid">
-
-        <div class="about-content">
-            <div class="about-title">
-            <h2>A Studio Built on <span>Capabilities</span></h2>
-            </div>
-
-            <p><strong>From Yarn to Finished Fabric – All Under One Roof</strong></p>
-
-            <ul class="fabreen-list">
-            <li>Weaving, dyeing, and printing of premium fabrics</li>
-            <li>Expertise in viscose, nylon, polyester, and blended materials</li>
-            <li>Custom fabric development for Western garment applications</li>
-            <li>High-precision finishing and texture consistency</li>
-            </ul>
-
-            <p>
-            This integrated approach ensures seamless control over quality, timelines, and
-            production efficiency—enabling FABREEN to deliver fabrics that are scalable and
-            customizable.
-            </p>
-        </div>
-
-        <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80" alt="FABREEN Manufacturing">
-        </div>
-
-        </div>
-    </div>
-    </section>
-<section class="fabreen-manifesto">
-    <div class="fabreen-manifesto-inner">
-
-        <span class="manifesto-label">INNOVATION AT THE CORE</span>
-
-        <h2>
-            FABRIC @ <span>FABREEN</span>
-        </h2>
-
-        <div class="manifesto-subtitle">
-            A Design Philosophy
-        </div>
-
-        <div class="manifesto-tags">
-            <span>Future-ready</span>
-            <span>Authentic</span>
-            <span>Bespoke</span>
-            <span>Responsible</span>
-            <span>Innovative</span>
-            <span>Circular</span>
-        </div>
-
-        <p>
-            At the heart of FABREEN lies its proprietary creative manifesto —
-            <strong>FABRIC @ FABREEN</strong>.
-            This philosophy drives a trend-led and responsible approach to textile development,
-            combining modern design thinking with sustainable and modular production processes.
-            Every collection is developed with a clear focus on global fashion movements,
-            functional performance, and long-term value.
-        </p>
-
-    </div>
-</section>
-
-<section class="fabreen-trust">
+<section class="partner-section">
     <div class="container">
-
-      
-
         <div class="row align-items-center">
 
             <!-- LEFT CONTENT -->
-            <div class="col-lg-7">
-              <div class="trust-header">
-            <h6>TRUSTED BY THE FASHION ECOSYSTEM</h6>
-            <h2>Partnering Brands, Designers & <span>Export Markets</span></h2>
-        </div>
-                <p class="trust-text">
-                    FABREEN supports apparel brands, fashion designers, and export-oriented
-                    manufacturers with high-performance fabrics suited for contemporary
-                    Western wear.
-                </p>
+            <div class="col-lg-6">
+                <span class="partner-badge">TRUSTED BY THE FASHION ECOSYSTEM</span>
 
-                <p class="trust-text">
-                    Its Surat-based infrastructure allows quick design-to-production cycles,
-                    making it an ideal partner for businesses that require:
-                </p>
+                <div class="partner-title">
+                    <h2>
+                        Partnering Brands, Designers & <span>Export Markets</span>
+                    </h2>
+                </div>
 
-                <ul class="trust-list">
-                    <li>Fast sampling and development</li>
-                    <li>Consistent bulk quality</li>
-                    <li>Customization across textures, prints, and finishes</li>
-                    <li>Reliable timelines for domestic and global markets</li>
-                </ul>
+                <div class="partner-text">
+                    <p>
+                        FABREEN supports apparel brands, fashion designers, and export-oriented
+                        manufacturers with high-performance fabrics crafted for contemporary
+                        Western wear.
+                    </p>
+
+                    <p>
+                        Our Surat-based infrastructure enables rapid design-to-production cycles,
+                        making FABREEN a preferred partner for businesses that demand speed,
+                        consistency, and innovation.
+                    </p>
+                </div>
+
+                <div class="partner-features">
+                    <div class="partner-feature"><i class="ti ti-check"></i> Fast sampling & development</div>
+                    <div class="partner-feature"><i class="ti ti-check"></i> Consistent bulk quality</div>
+                    <div class="partner-feature"><i class="ti ti-check"></i> Custom textures, prints & finishes</div>
+                    <div class="partner-feature"><i class="ti ti-check"></i> Reliable domestic & global timelines</div>
+                </div>
             </div>
 
-            <!-- RIGHT HIGHLIGHT CARD -->
-           <div class="col-lg-5 d-none d-lg-block">
-    <div class="trust-image">
-        <img src="images/partnership.jpg"
-             alt="Global Textile Industry">
-    </div>
-</div>
+            <!-- RIGHT IMAGE COMPOSITION -->
+            <div class="col-lg-6">
+                <div class="partner-images">
+                    <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=900&q=80"
+                         alt="Textile Exhibition">
+
+                    <div class="small-grid">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+                             alt="Export Buyers">
+                        <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=900&q=80"
+                             alt="Fashion Market">
+                    </div>
+                </div>
+            </div>
 
         </div>
 
-    </div>
-</section>
-
-
-       
-<section class="about-wrapper-1">
-    <div class="about-container">
-        <div class="about-story">
-
-
-                <section class="about-wrapper-1">
-    <div class="about-container">
-        <div class="about-story">
-
-            <h2>More Than Fabric – <span>A Story of Evolution</span></h2>
-
+        <!-- GLOBAL PRESENCE -->
+        <div class="partner-highlight">
+            <h3>Global Industry <span>Presence</span></h3>
             <p>
-                FABREEN is widely recognized for its commitment to creativity and excellence. As expressed by 
-JigneshSheta: 
-
+                FABREEN has showcased its textile innovations at prestigious platforms such as
+                <strong>BharatTex 2025</strong>, reinforcing its position among global buyers,
+                sourcing teams, and international fashion leaders.
             </p>
-
-            
-
-            <div class="about-tagline">
-                Often described in industry circles as <strong>“Think Fabric, Think FABREEN”</strong>,
-                the studio continues to push boundaries in textile performance and quality.
-            </div>
-
-            <!-- QUOTE -->
-            <div class="about-quote">
-                <p>
-                    FABREEN has become a name synonymous with innovation, quality, and creativity in 
-textiles—bringing modern solutions to the evolving needs of the fashion industry.
-
-                </p>
-                <strong>— Jignesh Sheta</strong>
-            </div>
-
         </div>
+
     </div>
 </section>
 
-
-    
-
-        </div>
-    </div>
-</section>
-
-
-
-
-            
 
 
             </div>
