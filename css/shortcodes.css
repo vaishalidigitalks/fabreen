@@ -789,7 +789,7 @@ i.fa-play{ padding-left: 5px; }
     position: absolute;
     bottom: -35px;
     width: 10px;
-    background-color: #c3002f;
+    background-color: #42aeb0;
     border-radius: 50%;
 }
 .ttm-fid.inside.style1:hover .ttm-fid-icon-wrapper  i {
@@ -3107,7 +3107,7 @@ ul.contact-widget-wrapper li {
         left: 50%;
         width: 120px;
         height: 3px;
-        background: #c3002f;
+        background: #42aeb0;
         transform: translateX(-50%);
         opacity: 0.15;
     }
@@ -3124,7 +3124,7 @@ ul.contact-widget-wrapper li {
         left: -18px;
         width: 100%;
         height: 100%;
-        border: 2px solid #c3002f;
+        border: 2px solid #42aeb0;
         border-radius: 14px;
         z-index: -1;
         opacity: 0.35;
@@ -3145,7 +3145,7 @@ ul.contact-widget-wrapper li {
         top: 50%;
         width: 30px;
         height: 2px;
-        background: #c3002f;
+        background: #42aeb0;
         transform: translateY(-50%);
     }
 /* ===============================
@@ -3164,7 +3164,7 @@ ul.contact-widget-wrapper li {
 }
 
 .trust-header h6 {
-    color: #c3002f;
+    color: #42aeb0;
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 10px;
@@ -3177,7 +3177,7 @@ ul.contact-widget-wrapper li {
 }
 
 .trust-header h2 span {
-    color: #c3002f;
+    color: #42aeb0;
 }
 
 .trust-text {
@@ -3207,7 +3207,7 @@ ul.contact-widget-wrapper li {
     position: absolute;
     left: 0;
     top: 2px;
-    color: #c3002f;
+    color: #42aeb0;
     font-weight: 600;
 }
 
@@ -3265,8 +3265,8 @@ ul.contact-widget-wrapper li {
     }
 
     .fabric-tags span:hover {
-        background: #c3002f;
-        border-color: #c3002f;
+        background: #42aeb0;
+        border-color: #42aeb0;
     }
 
     /* Quote refinement */
@@ -3279,8 +3279,8 @@ ul.contact-widget-wrapper li {
         font-style: italic;
         border-radius: 6px;
         font-size: 16px;
-        border: 1px solid #c3002f;
-        border-left: 6px solid #c3002f;
+        border: 1px solid #42aeb0;
+        border-left: 6px solid #42aeb0;
     }
 
     .about-container {
@@ -3305,13 +3305,13 @@ ul.contact-widget-wrapper li {
     }
 
     .about-title h6 {
-        color: #c3002f;
+        color: #42aeb0;
         letter-spacing: 1px;
         font-weight: 500;
         margin-bottom: 8px;
     }
     .about-title-1 h6 {
-        color: #c3002f;
+        color: #42aeb0;
         letter-spacing: 1px;
         font-weight: 500;
         margin-bottom: 8px;
@@ -3332,10 +3332,10 @@ ul.contact-widget-wrapper li {
         line-height: 1.25;
     }
     .about-title-1 h2 span{
-    color: #c3002f;
+    color: #42aeb0;
     }
     .about-title h2 span {
-        color: #c3002f;
+        color: #42aeb0;
     }
 
     .about-content p {
@@ -3365,7 +3365,7 @@ ul.contact-widget-wrapper li {
         position: absolute;
         left: 0;
         top: 2px;
-        color: #c3002f;
+        color: #42aeb0;
         font-weight: 600;
     }
 
@@ -3380,7 +3380,7 @@ ul.contact-widget-wrapper li {
     }
 
     .about-dark h2 span {
-        color: #c3002f;
+        color: #42aeb0;
     }
 
     /* CARD GRID */
@@ -3421,7 +3421,7 @@ ul.contact-widget-wrapper li {
     right: -18px;
     width: 100%;
     height: 100%;
-    /* border: 2px solid #c3002f; */
+    /* border: 2px solid #42aeb0; */
     border-radius: 16px;
     z-index: -1;
     opacity: 0.25;
@@ -3464,7 +3464,7 @@ ul.contact-widget-wrapper li {
 }
 
 .fabreen-manifesto h2 span {
-    color: #c3002f;
+    color: #42aeb0;
 }
 
 .manifesto-tags {
@@ -3486,8 +3486,8 @@ ul.contact-widget-wrapper li {
 }
 
 .manifesto-tags span:hover {
-    background: #c3002f;
-    border-color: #c3002f;
+    background: #42aeb0;
+    border-color: #42aeb0;
     transform: translateY(-2px);
 }
 
@@ -3515,11 +3515,11 @@ ul.contact-widget-wrapper li {
     width: 42px;
     height: 42px;
     background: #fff;
-    border: 2px solid #c3002f;
+    border: 2px solid #42aeb0;
     border-radius: 50%;
     font-size: 14px;
     font-weight: 600;
-    color: #c3002f;
+    color: #42aeb0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3549,7 +3549,7 @@ ul.contact-widget-wrapper li {
 }
 
 .about-story h2 span {
-    color: #c3002f;
+    color: #42aeb0;
 }
 
 .about-story p {
@@ -3596,7 +3596,7 @@ content: "“";
 }
 
 .about-quote strong {
-    color: #c3002f;
+    color: #42aeb0;
     font-size: 16px;
     letter-spacing: 0.5px;
 }
@@ -3635,14 +3635,14 @@ content: "“";
 .manifesto-label {
     display: inline-block;
     /* background: rgb(195 0 47 / 26%); */
-    color: #c3002f;
+    color: #42aeb0;
     padding: 7px 18px;
     border-radius: 30px;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 22px;
-    border: 1px solid #c3002f;
+    border: 1px solid #42aeb0;
 }
 
 /* TITLE */
@@ -3653,7 +3653,7 @@ content: "“";
 }
 
 .fabreen-manifesto-inner h2 span {
-    color: #c3002f;
+    color: #42aeb0;
 }
 
 /* SUB TITLE */
@@ -3684,8 +3684,8 @@ content: "“";
 }
 
 .manifesto-tags span:hover {
-    background: #c3002f;
-    border-color: #c3002f;
+    background: #42aeb0;
+    border-color: #42aeb0;
     transform: translateY(-3px);
 }
 
