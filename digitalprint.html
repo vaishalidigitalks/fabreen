@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description"
+        content="Fabreen - Indian weavers of designer of furnishing fabrics is a textile manufacturer founded in 2004 and renowned for new and stylish interpretations of natural & organic fabrics." />
+    <meta name="author" content="https://www.themetechmount.com/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fabreen</title>
+
+    <link rel="shortcut icon" href="images/New_Project__52_-removebg-preview.png" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
+    <link rel="stylesheet" type="text/css" href="css/themify-icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="css/shortcodes.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+</head>
+<style>
+    .digital-print-img {
+        position: relative;
+        overflow: hidden;
+        border-radius: 18px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+        transition: all 0.6s ease;
+    }
+
+    /* Image styling */
+    .digital-print-img img {
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        transition: transform 1s ease;
+    }
+
+    /* Hover zoom + lift */
+    .digital-print-img:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .digital-print-img:hover img {
+        transform: scale(1.08);
+    }
+
+    /* Soft gradient overlay */
+    .digital-print-img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg,
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0.35) 100%);
+        opacity: 0;
+        transition: opacity 0.6s ease;
+    }
+
+    .digital-print-img:hover::after {
+        opacity: 1;
+    }
+
+    /* Mobile optimization */
+    @media (max-width: 768px) {
+        .digital-print-img {
+            border-radius: 14px;
+        }
+
+        .digital-print-img img {
+            border-radius: 14px;
+        }
+    }
+
+    /* Force proper column behavior */
+    .ttm-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Each list item */
+    .ttm-list li {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 12px;
+
+        font-size: 15px;
+        line-height: 1.6;
+        color: #333;
+
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    /* Icon positioning */
+    .ttm-list li i {
+        position: absolute;
+        left: 0;
+        top: 6px;
+
+        font-size: 16px;
+        color: #0aa3a3;
+        /* match theme color */
+    }
+
+
+
+    .process-row {
+        margin-top: 30px;
+    }
+
+    /* Card base */
+    .process-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s ease;
+        overflow: hidden;
+        height: 100%;
+
+        /* load animation */
+        opacity: 0;
+        transform: translateY(40px);
+        animation: fadeUp 0.8s ease forwards;
+    }
+
+    /* Stagger animation */
+    .process-item:nth-child(1) .process-card {
+        animation-delay: 0.1s;
+    }
+
+    .process-item:nth-child(2) .process-card {
+        animation-delay: 0.2s;
+    }
+
+    .process-item:nth-child(3) .process-card {
+        animation-delay: 0.3s;
+    }
+
+    .process-item:nth-child(4) .process-card {
+        animation-delay: 0.4s;
+    }
+
+    /* Hover effect */
+    .process-card:hover {
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Image animation */
+    .process-img {
+        border-radius: 12px;
+        margin-bottom: 15px;
+        transition: transform 0.5s ease;
+    }
+
+    .process-card:hover .process-img {
+        transform: scale(1.08);
+    }
+
+    /* Text styling */
+    .process-card h5 {
+        font-weight: 600;
+        margin-top: 10px;
+        transition: color 0.3s ease;
+    }
+
+    .process-card p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    /* Title color on hover */
+    .process-card:hover h5 {
+        color: #007bff;
+    }
+
+    /* Fade Up Keyframe */
+    @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Mobile optimization */
+    @media (max-width: 768px) {
+        .process-card {
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+
+
+<body>
+
+    <!--page start-->
+    <div class="page">
+
+
+        <!--header start-->
+        <header id="masthead" class="header ttm-header-style-02 clearfix">
+            <div class="widget_header_wrapper ttm-bgcolor-darkgrey clearfix">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-12">
+                            <div class="ttm-widget_header d-flex flex-row align-items-center justify-content-between">
+                                <div class="widget_info d-flex flex-row align-items-center justify-content-end">
+                                    <div class="widget_icon ttm-textcolor-skincolor"><i
+                                            class="flaticon flaticon-email-2"></i></div>
+                                    <div class="widget_content">
+                                        <p>Send Email</p>
+                                        <h3>fabreenlifestyle@gmail.com</h3>
+                                    </div>
+                                </div>
+                                <div class="widget_info d-flex flex-row align-items-center justify-content-end">
+                                    <div class="widget_icon ttm-textcolor-skincolor"><i
+                                            class="flaticon flaticon-clock"></i></div>
+                                    <div class="widget_content">
+                                        <p>Address</p>
+                                        <h3>7007-7009 & 7015-16, Ashirvad Textile Market, Bhavani Industrial Estate,
+                                            Magob Surat Gujarat 395010</h3>
+                                    </div>
+                                </div>
+                                <!-- <div class="widget_info d-flex flex-row align-items-center justify-content-end">
+                                    <div class="widget_icon ttm-textcolor-skincolor"><i
+                                            class="flaticon flaticon-phone-call"></i></div>
+                                    <div class="widget_content">
+                                        <p>Have any Questions?</p>
+                                        <h3>
+                                            (+91) 9825304172</h3>
+                                    </div>
+                                </div> -->
+                                <div class="widget_info d-flex flex-row align-items-center justify-content-end">
+                                    <div class="social-icons">
+                                        <ul class="social-icons list-inline ttm-textcolor-skincolor">
+                                            <li><a class="tooltip-top"
+                                                    href="https://www.facebook.com/fabreen.garment.studio?mibextid=ibOpuV"
+                                                    rel="noopener" aria-label="facebook" data-tooltip=""
+                                                    target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="tooltip-top"
+                                                    href="https://www.instagram.com/fabreen_lifestyle/?igsh=MmF2eHpycXk3bWd0&utm_source=qr#"
+                                                    rel="noopener" aria-label="twitter" data-tooltip="Twitter"
+                                                    target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a class="tooltip-top" href="https://maps.app.goo.gl/Ed24hUb7AP56f39i9"
+                                                    rel="noopener" aria-label="flickr" data-tooltip="Flickr"
+                                                    target="_blank"><i class="fa fa-google"></i></a></li>
+                                            <li><a class="tooltip-top" href="https://www.linkedin.com/showcase/fabreen/"
+                                                    rel="noopener" aria-label="linkedin" data-tooltip="Linkedin"
+                                                    target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="site-header-menu" class="site-header-menu ttm-bgcolor-white ttm-textcolor-darkgrey">
+                <div class="site-header-menu-inner ttm-stickable-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <!--site-navigation -->
+                                <div id="site-navigation" class="site-navigation">
+                                    <div class="site-navigation-content d-flex flex-row align-items-center">
+                                        <div class="col-xl-3">
+                                            <!-- site-branding -->
+                                            <div class="site-branding ">
+                                                <a class="home-link" href="index.html" title="Fabreen" rel="home">
+                                                    <img id="logo-img" height="37" width="138"
+                                                        class="img-fluid auto_size logo-img"
+                                                        src="images/FABREEN-BLACK.png" alt="logo-img">
+                                                </a>
+                                            </div><!-- site-branding end -->
+                                        </div>
+                                        <div class="btn-show-menu-mobile menubar menubar--squeeze">
+                                            <span class="menubar-box">
+                                                <span class="menubar-inner"></span>
+                                            </span>
+                                        </div>
+                                        <nav class="main-menu menu-mobile" id="menu">
+                                            <ul class="menu">
+                                                <li class="mega-menu-item active">
+                                                    <a href="index.html" class="mega-menu-link">Home</a>
+
+                                                </li>
+                                                <li class="mega-menu-item ">
+                                                    <a href="about-us.html" class="mega-menu-link">About Us</a>
+
+                                                </li>
+                                                <li class="mega-menu-item">
+                                                    <a href="#" class="mega-menu-link">Services</a>
+                                                    <ul class="mega-submenu">
+                                                        <li>
+                                                            <a href="weaving.html">Weaving</a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="designing.html">Designing</a>
+                                                        </li>
+
+                                                        <li class="mega-menu-item">
+                                                            <a href="fabric-printing.html">Printing</a>
+                                                            <ul class="mega-submenu">
+                                                                <li><a href="millprint.html">Mill Printing</a></li>
+                                                                <li><a href="digitalprint.html">Digital Printing</a>
+                                                                </li>
+                                                                <li><a href="rubberprint.html">Rubber Printing</a></li>
+                                                                <li><a href="viscose-digital.html">Viscose Digital Printing</a></li>
+                                                                <li><a href="foilprint.html">Foil Printing</a></li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="manufacture.html">Manufacture</a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="stichfabric.html">Stitch Fabric</a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="we-design-fabric.html">We Design Fabric</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <!-- <li class="mega-menu-item">
+                                                    <a href="#" class="mega-menu-link">Pages</a>
+                                                    <ul class="mega-submenu">
+                                                        <li><a href="about-us.html">About Us 1</a></li>
+                                                        <li><a href="about-us-2.html">About Us 2</a></li>
+                                                        <li><a href="services-1.html">Services 1</a></li>
+                                                        <li><a href="services-2.html">Services 2</a></li>
+                                                        <li><a href="our-team.html">Our Team</a></li>
+                                                        <li><a href="team-details.html">Team Details</a></li>
+                                                        <li><a href="error.html">Error Page</a></li>
+                                                    </ul>
+                                                </li>
+                                              
+                                                <li class="mega-menu-item">
+                                                    <a href="#" class="mega-menu-link">Projects</a>
+                                                    <ul class="mega-submenu">
+                                                        <li><a href="project-style-01.html">Project One</a></li>
+                                                        <li><a href="project-style-02.html">Project Two</a></li>
+                                                        <li><a href="linen-fabric.html">Project Single</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-menu-item">
+                                                    <a href="#" class="mega-menu-link">Blog</a>
+                                                    <ul class="mega-submenu">
+                                                        <li><a href="blog.html">Blog Classic</a></li>
+                                                        <li><a href="blog-grid.html">Blog Grid View</a></li>
+                                                        <li><a href="blog-single.html">Blog Single View</a></li>
+                                                    </ul>
+                                                </li> -->
+                                                <li class="mega-menu-item">
+                                                    <a href="exhibition.html">Exhibition</a>
+                                                </li>
+                                                <li class="mega-menu-item">
+                                                    <a href="contact-us.html">Contact us</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <div class="header_extra d-flex flex-row align-items-center ms-auto">
+                                            <!-- <a href="contact-us.html" class="ttm-btn ttm-btn-size-sm ttm-btn-style-fill ttm-btn-shape-square ttm-btn-color-dark">Get Quote</a> -->
+                                            <!-- header_social -->
+                                            <!-- <div class="header_social">
+                                                <div class="social-icons">
+                                                    <ul class="social-icons list-inline ttm-textcolor-skincolor">
+                                                        <li><a class="tooltip-top" href="https://www.facebook.com/prt.333/" rel="noopener" aria-label="facebook" data-tooltip="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a class="tooltip-top" href="https://twitter.com/PreyanTechnosys" rel="noopener" aria-label="twitter" data-tooltip="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a class="tooltip-top" href="https://www.flickr.com/photos/166353669@N03/" rel="noopener" aria-label="flickr" data-tooltip="Flickr" target="_blank"><i class="fa fa-flickr"></i></a></li>
+                                                        <li><a class="tooltip-top" href="https://www.linkedin.com/in/preyan-technosys-pvt-ltd/" rel="noopener" aria-label="linkedin" data-tooltip="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div> -->
+                                            <div
+                                                class="widget_info d-flex flex-row align-items-center justify-content-end">
+                                                <div class="widget_icon ttm-textcolor-skincolor"><i
+                                                        class="flaticon flaticon-phone-call"></i></div>
+                                                <div class="widget_content">
+                                                    <p>Have any Questions?</p>
+                                                    <h3>(+91) 9825304172</h3>
+                                                </div>
+                                            </div>
+                                            <!-- header_social end-->
+                                        </div>
+                                    </div>
+                                </div><!-- site-navigation end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header><!--header end-->
+
+
+        <!-- page-title -->
+        <div class="ttm-page-title-row ttm-bg ttm-bgimage-yes ttm-bgcolor-darkgrey clearfix">
+            <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="ttm-page-title-row-inner">
+                            <div class="page-title-heading">
+                                <h2 class="title">Digital Printing</h2>
+                            </div>
+                            <div class="breadcrumb-wrapper">
+                                <span>
+                                    <a title="Homepage" href="index-2.html">Home</a>
+                                </span>
+                                <span>Digital Printing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page-title end -->
+
+
+        <!--site-main start-->
+        <div class="site-main">
+
+
+            <div class="ttm-row sidebar ttm-sidebar-left clearfix">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-4 widget-area sidebar-left">
+                            <aside class="widget widget-nav-menu">
+                                <ul>
+                                    <li class="active"><a href="weaving.html"> Weaving </a></li>
+                                    <li><a href="designing.html"> Designing </a></li>
+                                    <li><a href="fabric-printing.html"> Printing </a></li>
+
+                                    <li><a href="engineering.html"> Engineering </a></li>
+                                    <li><a href="manufacture.html"> Manufacture </a></li>
+                                    <li><a href="stichfabric.html"> Stich Fabric </a></li>
+                                    <li><a href="we-design-fabric.html"> We Design Fabric </a></li>
+                                </ul>
+                            </aside>
+                            <aside class="widget widget-download with-title">
+                                <div class="d-flex download_block">
+                                    <div class="download_img_icon">
+                                        <img class="img-fluid auto_size" width="46" height="53"
+                                            src="images/download-pdf.png" alt="download-pdf-img" />
+                                    </div>
+                                    <div class="padding_left20">
+                                        <p class="ttm-textcolor-skincolor margin_bottom0">Case Studies</p>
+                                        <h2 class="fs-18">Audit &amp; Assuarance</h2>
+                                        <a class="ttm-btn ttm-btn-size-md btn-inline ttm-btn-color-dark ttm-icon-btn-left"
+                                            href="#"><i class="ti ti-arrow-right"></i> Download (3.5 MB)</a>
+                                    </div>
+                                </div>
+                            </aside>
+                            <aside class="widget widget-banner">
+                                <div
+                                    class="ttm-col-bgcolor-yes ttm-bgcolor-darkgrey col-bg-img-seven ttm-col-bgimage-yes ttm-bg">
+                                    <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
+                                        <div class="ttm-col-wrapper-bg-layer-inner"></div>
+                                    </div>
+                                    <div class="layer-content">
+                                        <div class="widget-banner-inner">
+                                            <h3 class="ttm-textcolor-skincolor">Have Questions?</h3>
+                                            <p>Our Client Care Managers Are On Call 24/7 To Answer Your Question.</p>
+                                            <ul>
+                                                <li><i class="flaticon flaticon-phone-call"></i>(+91) 9825304172</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                            <aside class="widget contact-widget with-title">
+                                <h3 class="widget-title">Get in touch</h3>
+                                <ul class="contact-widget-wrapper">
+                                    <!-- <li><i class="ttm-textcolor-skincolor ti ti-location-pin"></i>7007-7009 & 7015-16
+                                        7th Floor (Block A)
+                                        Passanger Lift No : 2 & 3
+                                        Ashirvad Textile Market
+                                        Bhavani Industrial Estate
+                                        Magob Surat Gujarat 395010</li> -->
+                                    <li><i class="ttm-textcolor-skincolor ti ti-location-pin"></i><a
+                                            href="https://share.google/ggd1aNJSZ78hgsSpo" target="_blank"
+                                            style="color: inherit; text-decoration: none;">
+
+                                            B-6027-28, 6th Floor, Lift : 6 & 7, Ashirvad Textile Market, Saroli,
+                                            Bhavani
+                                            Industrial Estate, Surat, Gujarat 395010
+                                        </a></li>
+                                    <li><i class="ttm-textcolor-skincolor ti ti-email"></i><a
+                                            href="mailto:fabreenlifestyle@gmail.com"
+                                            target="_blank">fabreenlifestyle@gmail.com</a></li>
+                                    <li><i class="ttm-textcolor-skincolor ti ti-mobile"></i>(+91) 9825304172</li>
+                                    <!-- <li><i class="ttm-textcolor-skincolor ti ti-alarm-clock"></i>Mon to Sat - 9:00am to
+                                        6:00pm <br> (Sunday Closed)</li> -->
+                                </ul>
+                            </aside>
+                        </div>
+                        <!-- ===== CONTENT AREA ===== -->
+                        <div class="col-lg-8 content-area">
+                            <div class="ttm-service-single-content-area">
+                                <div class="ttm-service-description">
+
+                                    <h3>Advanced Digital Fabric Printing</h3>
+                                    <p>
+                                        Fabreen’s digital printing technology delivers vibrant colors, sharp details,
+                                        and limitless design flexibility. Ideal for short runs, custom patterns, and
+                                        high-fashion textiles with fast turnaround and minimal waste.
+                                    </p>
+
+                                    <div
+                                        class="padding_top20 padding_bottom20 animate__animated animate__fadeInUp digital-print-img">
+                                        <img src="images/services/abstract-multi-colored-confetti-falling-festive-celebration-generative-ai.jpg"
+                                            class="img-fluid" alt="Digital Printing">
+                                    </div>
+
+
+                                    <h3>Our Digital Printing Capabilities</h3>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="ttm-list bullet-list">
+                                                <li>High-resolution inkjet printing</li>
+                                                <li>Unlimited colors & gradients</li>
+                                                <li>No screen or roller setup</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="ttm-list bullet-list">
+                                                <li>Short & bulk run flexibility</li>
+                                                <li>Eco-friendly water-based inks</li>
+                                                <li>Quick sampling & production</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="padding_top30">Why Choose Fabreen Digital Printing</h3>
+                                    <div class="row why-choose-list">
+                                        <div class="col-md-4">
+                                            <ul class="ttm-list">
+                                                <li><i class="ti ti-check"></i> Photo-realistic print quality</li>
+                                                <li><i class="ti ti-check"></i> Low minimum order quantity</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <ul class="ttm-list">
+                                                <li><i class="ti ti-check"></i> Fast turnaround time</li>
+                                                <li><i class="ti ti-check"></i> Custom design freedom</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <ul class="ttm-list">
+                                                <li><i class="ti ti-check"></i> Minimal fabric wastage</li>
+                                                <li><i class="ti ti-check"></i> Sustainable process</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <h3 class="padding_top30 text-center">Our Digital Printing Process</h3>
+
+                                    <div class="row text-center process-row">
+
+                                        <div class="col-md-3 process-item">
+                                            <div class="process-card">
+
+                                                <img src="images/services/architectural-blueprints.jpg"
+                                                    class="img-fluid process-img" alt="Color Profiling">
+                                                <h5>Design Creation</h5>
+                                                <p>Digital artwork preparation</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 process-item">
+                                            <div class="process-card">
+                                                <img src="images/services/hands-male-graphic-designer-using-computer.jpg"
+                                                    class="img-fluid process-img" alt="Color Profiling">
+                                                <h5>Color Profiling</h5>
+                                                <p>Accurate color calibration</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 process-item">
+                                            <div class="process-card">
+                                                <img src="images/services/aesthetic-abstract-chromatography-background-colorful-tone.jpg"
+                                                    class="img-fluid process-img" alt="Digital Printing">
+                                                <h5>Digital Printing</h5>
+                                                <p>High-definition inkjet printing</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 process-item">
+                                            <div class="process-card">
+                                                <img src="images/services/grey-haired-male-plant-engineer-hardhat-glasses-standing-industrial-machine-using-digital-device (1).jpg"
+                                                    class="img-fluid process-img" alt="Finishing">
+                                                <h5>Finishing</h5>
+                                                <p>Heat setting & quality check</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div
+                                        class="ttm-bgcolor-skincolor text-center padding_top40 padding_bottom40 margin_top30">
+                                        <h3 class="text-white">Looking for Premium Digital Printing?</h3>
+                                        <p class="text-white">Get sharp, vibrant, and customized fabric prints with
+                                            Fabreen.</p>
+                                        <a href="contact-us.html" class="ttm-btn ttm-btn-color-white">Contact Us</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!-- row end -->
+    </div>
+    </div>
+
+
+    </div><!--site-main end-->
+
+
+    <!--footer start-->
+    <footer class="footer widget-footer ttm-bgcolor-darkgrey ttm-textcolor-white clearfix">
+        <div class="first-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 widget-area">
+                        <div class="widget widget_text clearfix">
+                            <div class="d-sm-flex align-items-center">
+                                <div class="footer-logo">
+                                    <img id="footer-logo-img" class="img-fluid auto_size" height="46" width="170"
+                                        src="images/image (21).png" alt="image">
+                                </div>
+                                <div class="textwidget widget-text">
+                                    <p>Indian weavers of designer of furnishing fabrics is a textile
+                                        manufacturer
+                                        founded in 2004 and renowned for new and stylish interpretations of
+                                        natural
+                                        & organic fabrics.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 widget-area">
+                        <div class="widget widget_social clearfix">
+                            <div class="social-icons text-lg-right">
+                                <ul class="social-icons list-inline">
+                                    <li><a class="tooltip-top" href="https://www.facebook.com/fabreen.garment.studio/"
+                                            rel="noopener" aria-label="facebook" data-tooltip="Facebook"
+                                            target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <!-- <li><a class="tooltip-top" href="https://twitter.com/PreyanTechnosys"
+                                                rel="noopener" aria-label="twitter" data-tooltip="Twitter"
+                                                target="_blank"><i class="fa fa-twitter"></i></a></li> -->
+                                    <li><a class="tooltip-top" href="https://www.instagram.com/fabreen_lifestyle/?hl=en"
+                                            rel="noopener" aria-label="flickr" data-tooltip="Flickr" target="_blank"><i
+                                                class="fa fa-instagram"></i></a></li>
+                                    <li><a class="tooltip-top" href="https://www.linkedin.com/showcase/fabreen/"
+                                            rel="noopener" aria-label="linkedin" data-tooltip="Linkedin"
+                                            target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                        <div class="widget widget_text margin_right10 clearfix">
+                            <h3 class="widget-title">About Us
+                            </h3>
+                            <div class="textwidget widget-text">
+                                <div class="call_detail">
+                                    <div class="padding_top10 padding_bottom10">
+                                        <p>We are excited to be part of fair trade and the environmentally
+                                            friendly
+                                            standards of the fashion industry and are constantly striving to
+                                            contribute to a healthy ecosystem.
+                                        </p>
+                                    </div>
+                                    <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-white w-100 text-center"
+                                            href="contact-us.html">Request Online Form</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                        <div class="widget widget_nav_menu clearfix">
+                            <h3 class="widget-title">Textile Services</h3>
+                            <ul id="menu-footer-quick-links" class="menu">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                        <div class="widget widget-recent-post clearfix">
+                            <h3 class="widget-title">Service Category</h3>
+                            <ul id="menu-footer-quick-links" class="menu">
+                                <li><a href="weaving.html">Weaving</a></li>
+                                <li><a href="designing.html">Designing</a></li>
+                                <li><a href="fabric-printing.html">Printing</a></li>
+                                <li><a href="manufacture.html">Manufacture</a></li>
+                                <li><a href="stichfabric.html">Stich Fabric</a></li>
+                                <li><a href="fabric-dyeing.html">Dyeing</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                        <div class="widget widget-latest-tweets clearfix">
+                            <h3 class="widget-title">Contact Us</h3>
+                            <ul class="widget_contact_wrapper">
+                                <li>
+                                    <a href="https://share.google/ggd1aNJSZ78hgsSpo" target="_blank"
+                                        style="color: inherit; text-decoration: none;">
+                                        <i class="ttm-textcolor-skincolor fa fa-map-marker"></i>
+                                        B-6027-28, 6th Floor, Lift : 6 & 7, Ashirvad Textile Market, Saroli,
+                                        Bhavani
+                                        Industrial Estate, Surat, Gujarat 395010
+                                    </a>
+                                </li>
+                                <li><i class="ttm-textcolor-skincolor fa fa-phone"></i>(+91) 9825304172</li>
+                                <li><i class="ttm-textcolor-skincolor fa fa-envelope-o"></i><a
+                                        href="mailto:fabreenlifestyle@gmail.com">fabreenlifestyle@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 widget-area">
+                        <div class="widget newsletter_widget clearfix">
+                            <form id="subscribe-form" class="newsletter-form" method="post" action="#"
+                                data-mailchimp="true">
+                                <div class="mailchimp-inputbox clearfix" id="subscribe-content">
+                                    <input type="text" name="NAME" id="txtname" placeholder="Your Name *" required="">
+                                    <input type="email" name="EMAIL" id="txtemail" placeholder="Your Email *"
+                                        required="">
+                                    <button
+                                        class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-fill ttm-btn-color-skincolor"
+                                        type="submit">Subscribe us<i class="fa fa-caret-right"
+                                            aria-hidden="true"></i></button>
+                                </div>
+                                <div id="subscribe-msg"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer-text copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <!-- <span class="cpy-text">Copyright © 2021 <a href="#"
+                                        class="ttm-textcolor-skincolor font-weight-500">Fablio </a> All rights
+                                    reserved.</span> -->
+
+                            <p class="text-center"> © Copyright 2025, All Rights<a class=""
+                                    style="text-decoration: none; color: #42aeb0;" href="/" target="_blank">
+                                    Fabreen
+                                </a>| Designed by: <a class="text-white" style="text-decoration: none;"
+                                    href="https://shopnoecommerce.com/" target="_blank">Shopno
+                                    Ecommerce</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer end-->
+
+    <!--back-to-top start-->
+    <a id="totop" href="#top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!--back-to-top end-->
+
+    </div><!-- page end -->
+
+
+    <!-- Javascript -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-migrate-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/jquery-waypoints.js"></script>
+    <script src="js/jquery-validate.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/numinate.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/jquery-isotope.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Javascript end-->
+
+</body>
+
+<!-- Mirrored from themetechmount.com/html/fablio/fabric-printing.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Nov 2025 10:57:58 GMT -->
+
+</html>

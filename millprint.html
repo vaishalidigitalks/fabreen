@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mill Printing | Fabreen</title>
+
+    <link rel="shortcut icon" href="images/New_Project__52_-removebg-preview.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/prettyPhoto.css">
+    <link rel="stylesheet" href="css/shortcodes.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/megamenu.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<style>
+    .mill-print-img {
+        position: relative;
+        overflow: hidden;
+        border-radius: 18px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+        transition: all 0.6s ease;
+    }
+
+    /* Image styling */
+    .mill-print-img img {
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        transition: transform 1s ease;
+    }
+
+    /* Hover zoom + lift */
+    .mill-print-img:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .mill-print-img:hover img {
+        transform: scale(1.08);
+    }
+
+    /* Soft gradient overlay */
+    .mill-print-img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg,
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0.35) 100%);
+        opacity: 0;
+        transition: opacity 0.6s ease;
+    }
+
+    .mill-print-img:hover::after {
+        opacity: 1;
+    }
+
+    /* ===== MILL PROCESS SECTION ===== */
+
+    .process-row {
+        margin-top: 30px;
+    }
+
+    .process-card {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s ease;
+        height: 100%;
+    }
+
+    /* Image styling */
+    .process-img {
+        border-radius: 12px;
+        margin-bottom: 15px;
+        transition: transform 0.5s ease;
+    }
+
+    /* Text styling */
+    .process-card h5 {
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .process-card p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 0;
+    }
+
+    /* Hover effect */
+    .process-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+    }
+
+    .process-card:hover .process-img {
+        transform: scale(1.05);
+    }
+
+    /* ===== SCROLL ANIMATION ===== */
+
+    .process-item {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.7s ease;
+    }
+
+    .process-item.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Stagger delay */
+    .process-item:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .process-item:nth-child(2) {
+        transition-delay: 0.25s;
+    }
+
+    .process-item:nth-child(3) {
+        transition-delay: 0.4s;
+    }
+
+    .process-item:nth-child(4) {
+        transition-delay: 0.55s;
+    }
+</style>
+
+<body>
+
+    <div class="page">
+
+        <!-- ================= HEADER (same as other pages) ================= -->
+        <!-- COPY your existing header here exactly (no change needed) -->
+
+        <!-- ================= PAGE TITLE ================= -->
+        <div class="ttm-page-title-row ttm-bg ttm-bgimage-yes ttm-bgcolor-darkgrey clearfix">
+            <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="ttm-page-title-row-inner">
+                            <div class="page-title-heading">
+                                <h2 class="title">Mill Printing</h2>
+                            </div>
+                            <div class="breadcrumb-wrapper">
+                                <span><a href="index.html">Home</a></span>
+                                <span>Mill Printing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <div class="site-main">
+
+            <div class="ttm-row sidebar ttm-sidebar-left clearfix">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- ===== LEFT SIDEBAR ===== -->
+                        <div class="ttm-row sidebar ttm-sidebar-left clearfix">
+                            <div class="container">
+                                <!-- row -->
+                                <div class="row">
+                                    <div class="col-lg-4 widget-area sidebar-left">
+                                        <aside class="widget widget-nav-menu">
+                                            <ul>
+                                                <li class="active"><a href="weaving.html"> Weaving </a></li>
+                                                <li><a href="designing.html"> Designing </a></li>
+                                                <li><a href="fabric-printing.html"> Printing </a></li>
+                                                <li><a href="engineering.html"> Engineering </a></li>
+                                                <li><a href="manufacture.html"> Manufacture </a></li>
+                                                <li><a href="stichfabric.html"> Stich Fabric </a></li>
+                                                <li><a href="we-design-fabric.html"> We Design Fabric </a></li>
+                                            </ul>
+                                        </aside>
+                                        <aside class="widget widget-download with-title">
+                                            <div class="d-flex download_block">
+                                                <div class="download_img_icon">
+                                                    <img class="img-fluid auto_size" width="46" height="53"
+                                                        src="images/download-pdf.png" alt="download-pdf-img" />
+                                                </div>
+                                                <div class="padding_left20">
+                                                    <p class="ttm-textcolor-skincolor margin_bottom0">Case Studies</p>
+                                                    <h2 class="fs-18">Audit &amp; Assuarance</h2>
+                                                    <a class="ttm-btn ttm-btn-size-md btn-inline ttm-btn-color-dark ttm-icon-btn-left"
+                                                        href="#"><i class="ti ti-arrow-right"></i> Download (3.5 MB)</a>
+                                                </div>
+                                            </div>
+                                        </aside>
+                                        <aside class="widget widget-banner">
+                                            <div
+                                                class="ttm-col-bgcolor-yes ttm-bgcolor-darkgrey col-bg-img-seven ttm-col-bgimage-yes ttm-bg">
+                                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
+                                                    <div class="ttm-col-wrapper-bg-layer-inner"></div>
+                                                </div>
+                                                <div class="layer-content">
+                                                    <div class="widget-banner-inner">
+                                                        <h3 class="ttm-textcolor-skincolor">Have Questions?</h3>
+                                                        <p>Our Client Care Managers Are On Call 24/7 To Answer Your
+                                                            Question.</p>
+                                                        <ul>
+                                                            <li><i class="flaticon flaticon-phone-call"></i>(+91)
+                                                                9825304172</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </aside>
+                                        <aside class="widget contact-widget with-title">
+                                            <h3 class="widget-title">Get in touch</h3>
+                                            <ul class="contact-widget-wrapper">
+                                                <!-- <li><i class="ttm-textcolor-skincolor ti ti-location-pin"></i>7007-7009 & 7015-16
+                                        7th Floor (Block A)
+                                        Passanger Lift No : 2 & 3
+                                        Ashirvad Textile Market
+                                        Bhavani Industrial Estate
+                                        Magob Surat Gujarat 395010</li> -->
+                                                <li><i class="ttm-textcolor-skincolor ti ti-location-pin"></i><a
+                                                        href="https://share.google/ggd1aNJSZ78hgsSpo" target="_blank"
+                                                        style="color: inherit; text-decoration: none;">
+
+                                                        B-6027-28, 6th Floor, Lift : 6 & 7, Ashirvad Textile Market,
+                                                        Saroli,
+                                                        Bhavani
+                                                        Industrial Estate, Surat, Gujarat 395010
+                                                    </a></li>
+                                                <li><i class="ttm-textcolor-skincolor ti ti-email"></i><a
+                                                        href="mailto:fabreenlifestyle@gmail.com"
+                                                        target="_blank">fabreenlifestyle@gmail.com</a></li>
+                                                <li><i class="ttm-textcolor-skincolor ti ti-mobile"></i>(+91) 9825304172
+                                                </li>
+                                                <!-- <li><i class="ttm-textcolor-skincolor ti ti-alarm-clock"></i>Mon to Sat - 9:00am to
+                                        6:00pm <br> (Sunday Closed)</li> -->
+                                            </ul>
+                                        </aside>
+                                    </div>
+                                    <!-- ===== CONTENT AREA ===== -->
+                                    <div class="col-lg-8 content-area">
+                                        <div class="ttm-service-single-content-area">
+                                            <div class="ttm-service-description">
+
+                                                <h3>High-Precision Mill Printing Solutions</h3>
+                                                <p>
+                                                    At Fabreen, our mill printing unit is designed for large-scale,
+                                                    high-accuracy textile printing.
+                                                    Using advanced machinery and expert supervision, we deliver
+                                                    consistent color depth, sharp detailing,
+                                                    and long-lasting print quality suitable for fashion, home
+                                                    furnishing, and industrial fabrics.
+                                                </p>
+
+                                                <!-- IMAGE -->
+
+                                                <div
+                                                    class="padding_top20 padding_bottom20 animate__animated animate__fadeInUp mill-print-img">
+                                                    <img src="images/services/img20.png" class="img-fluid"
+                                                        alt="Mill Printing">
+                                                </div>
+                                                <!-- CAPABILITIES -->
+                                                <h3>Our Mill Printing Capabilities</h3>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <ul class="ttm-list bullet-list">
+                                                            <li>High-speed rotary & flat-bed printing</li>
+                                                            <li>Accurate repeat & pattern alignment</li>
+                                                            <li>Rich color penetration & sharp detailing</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <ul class="ttm-list bullet-list">
+                                                            <li>Custom color & design matching</li>
+                                                            <li>Excellent wash & rub fastness</li>
+                                                            <li>Bulk production consistency</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <!-- WHY CHOOSE -->
+                                                <h3 class="padding_top30">Why Choose Fabreen Digital Printing</h3>
+                                                <div class="row why-choose-list">
+                                                    <div class="col-md-4">
+                                                        <ul class="ttm-list">
+                                                            <li><i class="ti ti-check"></i> Premium quality output</li>
+                                                            <li><i class="ti ti-check"></i>Eco-friendly & AZO-free inks
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <ul class="ttm-list">
+                                                            <li><i class="ti ti-check"></i> Strict quality inspections
+                                                            </li>
+                                                            <li><i class="ti ti-check"></i> Custom design freedom</li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <ul class="ttm-list">
+                                                            <li><i class="ti ti-check"></i> On-time delivery assurance
+                                                            </li>
+                                                            <li><i class="ti ti-check"></i> Industry-standard compliance
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <!-- PROCESS -->
+                                                <h3 class="padding_top30 text-center">Our Mill Printing Process</h3>
+
+                                                <div class="row text-center process-row">
+
+                                                    <div class="col-md-3 process-item">
+                                                        <div class="process-card">
+                                                            <img src="images/services/aesthetic-abstract-chromatography-background-colorful-tone.jpg"
+                                                                class="img-fluid process-img" alt="Design Setup">
+                                                            <h5>Design Setup</h5>
+                                                            <p>Artwork & color separation</p>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="col-md-3 process-item">
+                                                        <div class="process-card">
+                                                            <img src="images/services/cropped-shot-milling-machine-operator.jpg"
+                                                                class="img-fluid process-img" alt="Screen Roller">
+                                                            <h5>Screen / Roller</h5>
+                                                            <p>Precision alignment</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3 process-item">
+                                                        <div class="process-card">
+                                                            <img src="images/services/front-view-hands-blue-paint.jpg"
+                                                                class="img-fluid process-img" alt="Printing">
+                                                            <h5>Printing</h5>
+                                                            <p>Controlled ink application</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3 process-item">
+                                                        <div class="process-card">
+                                                            <img src="images/services/builder-men-wearing-safety-helmets.jpg"
+                                                                class="img-fluid process-img" alt="Quality Check">
+                                                            <h5>Quality Check</h5>
+                                                            <p>Inspection & finishing</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <!-- CTA -->
+                                                <div
+                                                    class="ttm-bgcolor-skincolor text-center padding_top40 padding_bottom40 margin_top30">
+                                                    <h3 class="text-white">Need Reliable Mill Printing?</h3>
+                                                    <p class="text-white">Partner with Fabreen for consistent,
+                                                        high-quality textile printing.</p>
+                                                    <a href="contact-us.html"
+                                                        class="ttm-btn ttm-btn-color-white">Contact Us</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                     
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+           <!-- ================= FOOTER ================= -->
+                        <!-- COPY your existing footer here exactly -->
+                         
+         <!--footer start-->
+    <footer class="footer widget-footer ttm-bgcolor-darkgrey ttm-textcolor-white clearfix">
+        <div class="first-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 widget-area">
+                        <div class="widget widget_text clearfix">
+                            <div class="d-sm-flex align-items-center">
+                                <div class="footer-logo">
+                                    <img id="footer-logo-img" class="img-fluid auto_size" height="46" width="170"
+                                        src="images/image (21).png" alt="image">
+                                </div>
+                                <div class="textwidget widget-text">
+                                    <p>Indian weavers of designer of furnishing fabrics is a textile
+                                        manufacturer
+                                        founded in 2004 and renowned for new and stylish interpretations of
+                                        natural
+                                        & organic fabrics.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 widget-area">
+                        <div class="widget widget_social clearfix">
+                            <div class="social-icons text-lg-right">
+                                <ul class="social-icons list-inline">
+                                    <li><a class="tooltip-top" href="https://www.facebook.com/fabreen.garment.studio/"
+                                            rel="noopener" aria-label="facebook" data-tooltip="Facebook"
+                                            target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <!-- <li><a class="tooltip-top" href="https://twitter.com/PreyanTechnosys"
+                                                rel="noopener" aria-label="twitter" data-tooltip="Twitter"
+                                                target="_blank"><i class="fa fa-twitter"></i></a></li> -->
+                                    <li><a class="tooltip-top" href="https://www.instagram.com/fabreen_lifestyle/?hl=en"
+                                            rel="noopener" aria-label="flickr" data-tooltip="Flickr" target="_blank"><i
+                                                class="fa fa-instagram"></i></a></li>
+                                    <li><a class="tooltip-top" href="https://www.linkedin.com/showcase/fabreen/"
+                                            rel="noopener" aria-label="linkedin" data-tooltip="Linkedin"
+                                            target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                        <div class="widget widget_text margin_right10 clearfix">
+                            <h3 class="widget-title">About Us
+                            </h3>
+                            <div class="textwidget widget-text">
+                                <div class="call_detail">
+                                    <div class="padding_top10 padding_bottom10">
+                                        <p>We are excited to be part of fair trade and the environmentally
+                                            friendly
+                                            standards of the fashion industry and are constantly striving to
+                                            contribute to a healthy ecosystem.
+                                        </p>
+                                    </div>
+                                    <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-white w-100 text-center"
+                                            href="contact-us.html">Request Online Form</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                        <div class="widget widget_nav_menu clearfix">
+                            <h3 class="widget-title">Textile Services</h3>
+                            <ul id="menu-footer-quick-links" class="menu">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                        <div class="widget widget-recent-post clearfix">
+                            <h3 class="widget-title">Service Category</h3>
+                            <ul id="menu-footer-quick-links" class="menu">
+                                <li><a href="weaving.html">Weaving</a></li>
+                                <li><a href="designing.html">Designing</a></li>
+                                <li><a href="fabric-printing.html">Printing</a></li>
+                                <li><a href="manufacture.html">Manufacture</a></li>
+                                <li><a href="stichfabric.html">Stich Fabric</a></li>
+                                <li><a href="fabric-dyeing.html">Dyeing</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                        <div class="widget widget-latest-tweets clearfix">
+                            <h3 class="widget-title">Contact Us</h3>
+                            <ul class="widget_contact_wrapper">
+                                <li>
+                                    <a href="https://share.google/ggd1aNJSZ78hgsSpo" target="_blank"
+                                        style="color: inherit; text-decoration: none;">
+                                        <i class="ttm-textcolor-skincolor fa fa-map-marker"></i>
+                                        B-6027-28, 6th Floor, Lift : 6 & 7, Ashirvad Textile Market, Saroli,
+                                        Bhavani
+                                        Industrial Estate, Surat, Gujarat 395010
+                                    </a>
+                                </li>
+                                <li><i class="ttm-textcolor-skincolor fa fa-phone"></i>(+91) 9825304172</li>
+                                <li><i class="ttm-textcolor-skincolor fa fa-envelope-o"></i><a
+                                        href="mailto:fabreenlifestyle@gmail.com">fabreenlifestyle@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 widget-area">
+                        <div class="widget newsletter_widget clearfix">
+                            <form id="subscribe-form" class="newsletter-form" method="post" action="#"
+                                data-mailchimp="true">
+                                <div class="mailchimp-inputbox clearfix" id="subscribe-content">
+                                    <input type="text" name="NAME" id="txtname" placeholder="Your Name *" required="">
+                                    <input type="email" name="EMAIL" id="txtemail" placeholder="Your Email *"
+                                        required="">
+                                    <button
+                                        class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-fill ttm-btn-color-skincolor"
+                                        type="submit">Subscribe us<i class="fa fa-caret-right"
+                                            aria-hidden="true"></i></button>
+                                </div>
+                                <div id="subscribe-msg"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer-text copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <!-- <span class="cpy-text">Copyright © 2021 <a href="#"
+                                        class="ttm-textcolor-skincolor font-weight-500">Fablio </a> All rights
+                                    reserved.</span> -->
+
+                            <p class="text-center"> © Copyright 2025, All Rights<a class=""
+                                    style="text-decoration: none; color: #42aeb0;" href="/" target="_blank">
+                                    Fabreen
+                                </a>| Designed by: <a class="text-white" style="text-decoration: none;"
+                                    href="https://shopnoecommerce.com/" target="_blank">Shopno
+                                    Ecommerce</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer end-->
+
+    <!--back-to-top start-->
+    <a id="totop" href="#top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!--back-to-top end-->
+
+    </div><!-- page end -->
+
+                
+
+
+                    <!-- JS -->
+                    <script src="js/jquery-3.7.1.min.js"></script>
+                    <script src="js/bootstrap.bundle.min.js"></script>
+                    <script src="js/jquery.prettyPhoto.js"></script>
+                    <script src="js/slick.min.js"></script>
+                    <script src="js/main.js"></script>
+
+
+                    <script>
+                        $(document).ready(function () {
+                            $(window).on("scroll", function () {
+                                $(".process-item").each(function () {
+                                    var elementTop = $(this).offset().top;
+                                    var windowBottom = $(window).scrollTop() + $(window).height();
+
+                                    if (windowBottom > elementTop + 80) {
+                                        $(this).addClass("show");
+                                    }
+                                });
+                            });
+
+                            $(window).trigger("scroll");
+                        });
+                    </script>
+
+
+</body>
+
+</html>
