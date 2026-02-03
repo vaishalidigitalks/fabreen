@@ -25,7 +25,88 @@
     <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
 </head>
+<style>
+    .mega-panel {
+    display: none; /* hide initially */
+    position: absolute; /* adjust as needed */
+    background: #fff; /* optional styling */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    z-index: 999;
+    margin-left: 100px;;
+}
 
+/* Optional: style active */
+.mega-panel.active {
+    display: block;
+}
+
+     .mega-panel {
+    z-index: 99999 !important;
+    pointer-events: auto !important;
+}
+header,
+.header,
+.navbar,
+.nav-wrapper {
+    position: relative;
+    z-index: 1000;
+}
+.mega-panel a {
+    position: relative;
+    z-index: 100000;
+    pointer-events: auto;
+}
+
+
+    .mega-submenu{
+        position: relative;
+        border-radius: 15px;
+    }
+.mega-printing .mega-panel {
+    position: absolute;
+    top: 100%;
+    left: 250px; /* aligns with sidebar */
+    background: #fff;
+    box-shadow: #6b7280;
+    width: 750px;
+    padding: 20px;
+    display: none;
+   
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.12);
+    z-index: 9999;
+}
+.mega-printing {
+    position: relative;
+}
+
+/* SHOW ON HOVER */
+.mega-printing:hover .mega-panel,
+.mega-panel:hover {
+    display: grid;
+}
+/* COLUMNS */
+.mega-col h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.mega-col a {
+    display: block;
+    padding: 5px 0;
+    color: #6b7280;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+}
+
+.mega-col a:hover {
+    color: #1aa3a3;
+}
+
+</style>
 
 
 <body>
@@ -245,7 +326,33 @@
                                 <ul>
                                     <li class="active"><a href="weaving.html"> Weaving </a></li>
                                     <li><a href="designing.html"> Designing </a></li>
-                                    <li><a href="fabric-printing.html"> Printing </a></li>
+                               <li class="menu-item has-mega">
+    <a href="fabric-printing.html" class="printing-link">Printing</a>
+    <div class="mega-panel">
+        <div class="mega-col">
+            <h5>PRINTING</h5>
+            <a href="millprint.html">Mill Printing</a>
+            <a href="digitalprint.html">Digital Printing</a>
+            <a href="rubberprint.html">Rubber Printing</a>
+            <a href="viscose-digital.html">Viscose Digital Printing</a>
+            <a href="foilprint.html">Foil Printing</a>
+        </div>
+
+        <div class="mega-col">
+            <h5>VALUE ADDITION</h5>
+            <a href="crosset.html">Crosset</a>
+            <a href="russal.html">Russal</a>
+        </div>
+
+        <div class="mega-col">
+            <h5>CROSET FABRICS</h5>
+            <a href="crushing.html">Crushing</a>
+            <a href="plasting.html">Plasting</a>
+            <a href="fusing.html">Fusing</a>
+        </div>
+    </div>
+</li>
+
                                     <li><a href="engineering.html"> Engineering </a></li>
                                     <li><a href="manufacture.html"> Manufacture </a></li>
                                     <li><a href="stichfabric.html"> Stich Fabric </a></li>
@@ -642,6 +749,24 @@
         <!--back-to-top end-->
 
     </div><!-- page end -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const printingLink = document.querySelector(".printing-link");
+    const megaPanel = document.querySelector(".mega-panel");
+
+    printingLink.addEventListener("click", function(e) {
+        e.preventDefault(); // prevent default link navigation
+        megaPanel.classList.toggle("active"); // toggle visibility
+    });
+
+    // Optional: close when clicking outside
+    document.addEventListener("click", function(e) {
+        if (!printingLink.contains(e.target) && !megaPanel.contains(e.target)) {
+            megaPanel.classList.remove("active");
+        }
+    });
+});
+</script>
 
 
     <!-- Javascript -->
