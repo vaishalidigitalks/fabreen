@@ -30,21 +30,28 @@
        /*header css*/
 
     /* ================= MEGA MENU BASE ================= */
-   
+
     .mega-menu-item.has-submenu {
         position: relative;
     }
 
-.widget-nav-menu .aside-submenu {
-    display: none !important;
-    margin: 0 !important;
-    padding-top: 0 !important;
-}
+    .widget-nav-menu .aside-submenu {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+        margin: 0;
+        padding: 0 16px;
+    }
 
-/* OPEN STATE */
-.widget-nav-menu li.open > .aside-submenu {
-    display: block !important;
-}
+    /* OPEN STATE */
+    .widget-nav-menu li.open>.aside-submenu {
+        max-height: 1000px;
+        /* enough height */
+        opacity: 1;
+        padding: 12px 16px;
+    }
+
 
     /* SUBMENU FIX */
     /* Parent list item */

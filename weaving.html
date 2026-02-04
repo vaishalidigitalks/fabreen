@@ -34,21 +34,22 @@
         position: relative;
     }
 
-.widget-nav-menu .aside-submenu {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.3s ease;
-    margin: 0;
-    padding: 0 16px;
-}
+    .widget-nav-menu .aside-submenu {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+        margin: 0;
+        padding: 0 16px;
+    }
 
-/* OPEN STATE */
-.widget-nav-menu li.open > .aside-submenu {
-    max-height: 1000px; /* enough height */
-    opacity: 1;
-    padding: 12px 16px;
-}
+    /* OPEN STATE */
+    .widget-nav-menu li.open>.aside-submenu {
+        max-height: 1000px;
+        /* enough height */
+        opacity: 1;
+        padding: 12px 16px;
+    }
 
     /* Parent list item */
     .menu-link {
@@ -73,10 +74,11 @@
 
 
     ul.aside-submenu {
-    width: 350px;
-    min-width: 350px;
-    max-width: 350px;
-}
+        width: 350px;
+        min-width: 350px;
+        max-width: 350px;
+    }
+
     .mega-menu-item>a {
         display: block;
         /* ← THIS is the fix */
@@ -111,9 +113,16 @@
         padding-left: 15px;
     }
 
-    .side-menu li.open>.mega-submenu {
-        display: block;
-    }
+
+    /* footer css*/
+    .footer-click > .sub-menu {
+    display: none;
+}
+
+.footer-click.open > .sub-menu {
+    display: block;
+}
+
 </style>
 
 
@@ -239,11 +248,9 @@
                                                                 <li><a href="digitalprint.html">Digital Printing</a>
                                                                 </li>
                                                                 <li><a href="rubberprint.html">Rubber Printing</a></li>
-                                                                <li><a href="viscose-digital.html">Viscose Digital
-                                                                        Printing</a></li>
+                                                                <li><a href="viscose-digital.html">Viscose Digital Printing</a></li>
                                                                 <li><a href="foilprint.html">Foil Printing</a></li>
-                                                                <li><a href="embrodary-nonembrodary.html">Embroidery &
-                                                                        Non-Embroidery</a></li>
+                                                                <li><a href="embrodary-nonembrodary.html">Embroidery & Non-Embroidery</a></li>
                                                                 <li><a href="chain-stich.html">Chain Stitch</a></li>
                                                                 <li><a href="ribben-stich.html">Ribbon Stitch</a></li>
                                                                 <li><a href="coding-work.html">Codding Work</a></li>
@@ -257,7 +264,7 @@
                                                                         class="fa fa-chevron-right"></i></span></a>
                                                             <ul class="mega-submenu">
                                                                 <li><a href="crushing.html">Crushing</a> </li>
-                                                                <li><a href="plasting.html">Plasting</a> </li>
+                                                                <li><a href="platting.html">Platting</a> </li>
                                                                 <li><a href="fusing.html">Fusing</a> </li>
                                                             </ul>
 
@@ -363,8 +370,7 @@
                                             <li><a href="digitalprint.html">Digital Printing</a>
                                             </li>
                                             <li><a href="rubberprint.html">Rubber Printing</a></li>
-                                            <li><a href="viscose-digital.html">Viscose Digital
-                                                    Printing</a></li>
+                                            <li><a href="viscose-digital.html">Viscose Digital Printing</a></li>
                                             <li><a href="foilprint.html">Foil Printing</a></li>
                                             <li><a href="embrodary-nonembrodary.html">Embroidery &
                                                     Non-Embroidery</a></li>
@@ -380,7 +386,7 @@
 
                                         <ul class="aside-submenu">
                                             <li><a href="crushing.html">Crushing</a> </li>
-                                            <li><a href="plasting.html">Plasting</a> </li>
+                                            <li><a href="platting.html">Platting</a> </li>
                                             <li><a href="fusing.html">Fusing</a> </li>
                                         </ul>
                                     </li>
@@ -703,11 +709,43 @@
                                 <h3 class="widget-title">Service Category</h3>
                                 <ul id="menu-footer-quick-links" class="menu">
                                     <li><a href="weaving.html">Weaving</a></li>
-                                    <li><a href="designing.html">Designing</a></li>
-                                    <li><a href="fabric-printing.html">Printing</a></li>
-                                    <li><a href="manufacture.html">Manufacture</a></li>
-                                    <li><a href="stichfabric.html">Stich Fabric</a></li>
-                                    <li><a href="fabric-dyeing.html">Dyeing</a></li>
+                                    <li><a href="dyeing.html">Dyeing</a></li>
+                                    <li class="menu-item menu-item-has-children footer-click">
+                                        <a href="#">Printing</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="millprint.html">Mill Print</a></li>
+                                            <li><a href="digitalprint.html">Digital Print</a></li>
+                                            <li><a href="rubberprint.html">Rubber Print</a></li>
+                                            <li><a href="viscose-digital.html">Viscose Digital Print</a></li>
+                                            <li><a href="foilprint.html">Foil Print</a></li>
+                                            <li><a href="embrodary-nonembrodary.html">Embroidery & Non-Embroidery</a>
+                                            </li>
+                                            <li><a href="chain-stich.html">Chain Stitch</a></li>
+                                            <li><a href="ribben-stich.html">Ribbon Stitch</a></li>
+                                            <li><a href="coding-work.html">Coding Work</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children footer-click">
+                                        <a href="#">Value Addition</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="crushing.html">Crushing</a></li>
+                                            <li><a href="platting.html">Platting</a></li>
+                                            <li><a href="fusing.html">Fusing</a></li>
+
+
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children footer-click">
+                                        <a href="#">Croset Fabrics</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="crosset.html">Croset</a></li>
+                                            <li><a href="russal.html">Russal</a></li>
+                                          
+
+                                        </ul>
+                                    </li>
+                                  
+
 
                                 </ul>
                             </div>
@@ -823,6 +861,23 @@
     <!-- Javascript end-->
 
 </body>
+<script>
+document.querySelectorAll('.footer-click > a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const li = this.parentElement;
+
+        // close other footer dropdowns
+        document.querySelectorAll('.footer-click').forEach(item => {
+            if (item !== li) item.classList.remove('open');
+        });
+
+        li.classList.toggle('open');
+    });
+});
+</script>
+
 
 <!-- Mirrored from themetechmount.com/html/fablio/fabric-printing.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Nov 2025 10:57:58 GMT -->
 

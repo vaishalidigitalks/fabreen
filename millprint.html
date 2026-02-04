@@ -27,20 +27,27 @@
 
     /* ================= MEGA MENU BASE ================= */
    
+
     .mega-menu-item.has-submenu {
         position: relative;
     }
 
-.widget-nav-menu .aside-submenu {
-    display: none !important;
-    margin: 0 !important;
-    padding-top: 0 !important;
-}
+    .widget-nav-menu .aside-submenu {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+        margin: 0;
+        padding: 0 16px;
+    }
 
-/* OPEN STATE */
-.widget-nav-menu li.open > .aside-submenu {
-    display: block !important;
-}
+    /* OPEN STATE */
+    .widget-nav-menu li.open>.aside-submenu {
+        max-height: 1000px;
+        /* enough height */
+        opacity: 1;
+        padding: 12px 16px;
+    }
 
     /* SUBMENU FIX */
     /* Parent list item */
@@ -375,7 +382,7 @@
                                                                         class="fa fa-chevron-right"></i></span></a>
                                                             <ul class="mega-submenu">
                                                                 <li><a href="crushing.html">Crushing</a> </li>
-                                                                <li><a href="plasting.html">Plasting</a> </li>
+                                                                <li><a href="platting.html">Platting</a> </li>
                                                                 <li><a href="fusing.html">Fusing</a> </li>
                                                             </ul>
 
@@ -499,7 +506,7 @@
 
                                                     <ul class="aside-submenu">
                                                         <li><a href="crushing.html">Crushing</a> </li>
-                                                        <li><a href="plasting.html">Plasting</a> </li>
+                                                        <li><a href="platting.html">Plasting</a> </li>
                                                         <li><a href="fusing.html">Fusing</a> </li>
                                                     </ul>
                                                 </li>

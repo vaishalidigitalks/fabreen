@@ -3386,7 +3386,7 @@ nav.main-menu .megamenu-content .title {
     right: -15px;
     height: 17px;
     z-index: -1;
-    6
+    
 }
 
 @media only screen and (max-width: 1200px) {
@@ -3741,9 +3741,6 @@ nav.main-menu .megamenu-content .title {
     background-attachment: scroll;
 }
 
-.footer .footer-logo img {
-    /* max-height: 46px; */
-}
 
 .footer .footer-logo {
     position: relative;
@@ -4100,12 +4097,29 @@ ul.footer-nav-menu li:last-child:after {
 
 /* ===============================
    PAGE TITLE BACKGROUND SECTION
-================================ */
+================================ *//* ===== HEADER OVERFLOW & HEIGHT FIX ===== */
+.site-header,
+.site-header-menu,
+.site-header-menu-inner,
+.ttm-stickable-header,
+.site-navigation,
+.site-navigation-content,
+.main-menu {
+    overflow: visible !important;
+    height: auto !important;
+}
+
 
 .ttm-page-title-row {
     position: relative;
-    overflow: hidden;
-    z-index: 0;
+    overflow: visible;
+    z-index: 1;
+       
+}
+.site-header,
+.ttm-stickable-header {
+    position: relative;
+    z-index: 9999;
 }
 
 /* 🔁 Background Image with Infinite Zoom */
