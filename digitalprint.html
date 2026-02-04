@@ -26,10 +26,100 @@
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
 </head>
 <style>
-    .digital-printing-capabilities{
-        margin-top: 40px;
+
+       /*header css*/
+
+    /* ================= MEGA MENU BASE ================= */
+   
+    .mega-menu-item.has-submenu {
+        position: relative;
+    }
+
+.widget-nav-menu .aside-submenu {
+    display: none !important;
+    margin: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* OPEN STATE */
+.widget-nav-menu li.open > .aside-submenu {
+    display: block !important;
+}
+
+    /* SUBMENU FIX */
+    /* Parent list item */
+    .menu-link {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .menu-text {
+        flex: 1;
+    }
+
+    .menu-arrow {
+        margin-left: auto;
+    }
+
+    .mega-menu-item>a {
+        width: 100%;
+        display: block;
+    }
+
+
+    ul.aside-submenu {
+        width: 350px !important;
+        min-width: 350px;
+        max-width: 350px;
+        padding: 12px 16px;
+        margin: 0px;
 
     }
+
+    .mega-menu-item>a {
+        display: block;
+        /* ← THIS is the fix */
+        width: 100%;
+        /* ← THIS is the fix */
+        position: relative;
+        padding-right: 30px;
+    }
+
+    .menu-arrow {
+
+        padding-left: 100px;
+        font-size: 10px;
+
+
+    }
+
+    .crosset-arrow {
+        padding-left: 57px;
+        font-size: 10px;
+
+    }
+
+    .value-addition-arrow {
+        padding-left: 55px;
+        font-size: 10px;
+    }
+
+
+    .side-menu .mega-submenu {
+    display: none;
+    padding-left: 15px;
+}
+
+.side-menu li.open > .mega-submenu {
+    display: block;
+}
+
+    .digital-printing-capabilities {
+        margin-top: 40px;
+    }
+
     .digital-print-img {
         position: relative;
         overflow: hidden;
@@ -71,6 +161,7 @@
     .digital-print-img:hover::after {
         opacity: 1;
     }
+
 
     /* Mobile optimization */
     @media (max-width: 768px) {
@@ -304,7 +395,7 @@
                                                     <a href="about-us.html" class="mega-menu-link">About Us</a>
 
                                                 </li>
-                                                <li class="mega-menu-item">
+                                               <li class="mega-menu-item">
                                                     <a href="#" class="mega-menu-link">Services</a>
                                                     <ul class="mega-submenu">
                                                         <li>
@@ -312,67 +403,64 @@
                                                         </li>
 
                                                         <li>
-                                                            <a href="designing.html">Designing</a>
+                                                            <a href="dyeing.html">Dyeing</a>
                                                         </li>
 
-                                                        <li class="mega-menu-item">
-                                                            <a href="fabric-printing.html">Printing</a>
+                                                        <li class="mega-menu-item has-submenu">
+                                                            <a href="fabric-printing.html" class="menu-link">
+                                                                <span class="menu-text">Printing</span>
+                                                                <span class="menu-arrow">
+                                                                    <i class="fa fa-chevron-right"></i>
+                                                                </span>
+                                                            </a>
+
                                                             <ul class="mega-submenu">
                                                                 <li><a href="millprint.html">Mill Printing</a></li>
                                                                 <li><a href="digitalprint.html">Digital Printing</a>
                                                                 </li>
                                                                 <li><a href="rubberprint.html">Rubber Printing</a></li>
-                                                                <li><a href="viscose-digital.html">Viscose Digital Printing</a></li>
+                                                                <li><a href="viscose-digital.html">Viscose Digital
+                                                                        Printing</a></li>
                                                                 <li><a href="foilprint.html">Foil Printing</a></li>
+                                                                <li><a href="embrodary-nonembrodary.html">Embroidery &
+                                                                        Non-Embroidery</a></li>
+                                                                <li><a href="chain-stich.html">Chain Stitch</a></li>
+                                                                <li><a href="ribben-stich.html">Ribbon Stitch</a></li>
+                                                                <li><a href="coding-work.html">Codding Work</a></li>
                                                             </ul>
                                                         </li>
 
-                                                        <li>
-                                                            <a href="manufacture.html">Manufacture</a>
+
+                                                        <li class="mega-menu-item">
+                                                            <a href="value-addition.html">Value Addition <span
+                                                                    class="value-addition-arrow"><i
+                                                                        class="fa fa-chevron-right"></i></span></a>
+                                                            <ul class="mega-submenu">
+                                                                <li><a href="crushing.html">Crushing</a> </li>
+                                                                <li><a href="plasting.html">Plasting</a> </li>
+                                                                <li><a href="fusing.html">Fusing</a> </li>
+                                                            </ul>
+
+
+                                                        <li class="mega-menu-item has-submenu">
+                                                            <a href=".html">
+                                                                Croset Fabrics<span class="crosset-arrow"><i
+                                                                        class="fa fa-chevron-right"></i></span>
+                                                            </a>
+                                                            <ul class="mega-submenu">
+                                                                <li><a href="croset.html">Croset</a> </li>
+
+
+                                                                <li><a href="russal.html">Russal</a> </li>
+
+                                                            </ul>
                                                         </li>
 
-                                                        <li>
-                                                            <a href="stichfabric.html">Stitch Fabric</a>
-                                                        </li>
 
-                                                        <li>
-                                                            <a href="we-design-fabric.html">We Design Fabric</a>
-                                                        </li>
                                                     </ul>
                                                 </li>
 
-                                                <!-- <li class="mega-menu-item">
-                                                    <a href="#" class="mega-menu-link">Pages</a>
-                                                    <ul class="mega-submenu">
-                                                        <li><a href="about-us.html">About Us 1</a></li>
-                                                        <li><a href="about-us-2.html">About Us 2</a></li>
-                                                        <li><a href="services-1.html">Services 1</a></li>
-                                                        <li><a href="services-2.html">Services 2</a></li>
-                                                        <li><a href="our-team.html">Our Team</a></li>
-                                                        <li><a href="team-details.html">Team Details</a></li>
-                                                        <li><a href="error.html">Error Page</a></li>
-                                                    </ul>
-                                                </li>
-                                              
-                                                <li class="mega-menu-item">
-                                                    <a href="#" class="mega-menu-link">Projects</a>
-                                                    <ul class="mega-submenu">
-                                                        <li><a href="project-style-01.html">Project One</a></li>
-                                                        <li><a href="project-style-02.html">Project Two</a></li>
-                                                        <li><a href="linen-fabric.html">Project Single</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="mega-menu-item">
-                                                    <a href="#" class="mega-menu-link">Blog</a>
-                                                    <ul class="mega-submenu">
-                                                        <li><a href="blog.html">Blog Classic</a></li>
-                                                        <li><a href="blog-grid.html">Blog Grid View</a></li>
-                                                        <li><a href="blog-single.html">Blog Single View</a></li>
-                                                    </ul>
-                                                </li> -->
-                                                <li class="mega-menu-item">
-                                                    <a href="exhibition.html">Exhibition</a>
-                                                </li>
+                                            
                                                 <li class="mega-menu-item">
                                                     <a href="contact-us.html">Contact us</a>
                                                 </li>
@@ -445,18 +533,48 @@
                     <!-- row -->
                     <div class="row">
                         <div class="col-lg-4 widget-area sidebar-left">
-                            <aside class="widget widget-nav-menu">
-                                <ul>
-                                    <li class="active"><a href="weaving.html"> Weaving </a></li>
-                                    <li><a href="designing.html"> Designing </a></li>
-                                    <li><a href="fabric-printing.html"> Printing </a></li>
+                             <aside class="widget widget-nav-menu">
+                                            <ul>
+                                                <li class="active "><a href="weaving.html"> Weaving </a></li>
+                                                <li><a href="dyeing.html"> Dyeing</a></li>
+                                                <li class="has-dropdown click-only">
+                                                    <a href="fabric-printing.html"> Printing </a>
+                                                    <ul class="aside-submenu">
+                                                        <li><a href="millprint.html">Mill Printing</a></li>
+                                                        <li><a href="digitalprint.html">Digital Printing</a>
+                                                        </li>
+                                                        <li><a href="rubberprint.html">Rubber Printing</a></li>
+                                                        <li><a href="viscose-digital.html">Viscose Digital
+                                                                Printing</a></li>
+                                                        <li><a href="foilprint.html">Foil Printing</a></li>
+                                                        <li><a href="embrodary-nonembrodary.html">Embroidery &
+                                                                Non-Embroidery</a></li>
+                                                        <li><a href="chain-stich.html">Chain Stitch</a></li>
+                                                        <li><a href="ribben-stich.html">Ribbon Stitch</a></li>
+                                                        <li><a href="coding-work.html">Codding Work</a></li>
+                                                    </ul>
 
-                                    <li><a href="engineering.html"> Engineering </a></li>
-                                    <li><a href="manufacture.html"> Manufacture </a></li>
-                                    <li><a href="stichfabric.html"> Stich Fabric </a></li>
-                                    <li><a href="we-design-fabric.html"> We Design Fabric </a></li>
-                                </ul>
-                            </aside>
+                                                </li>
+                                                <li class="has-dropdown click-only">
+                                                    <a href="#">Value Addition</a>
+
+
+                                                    <ul class="aside-submenu">
+                                                        <li><a href="crushing.html">Crushing</a> </li>
+                                                        <li><a href="plasting.html">Plasting</a> </li>
+                                                        <li><a href="fusing.html">Fusing</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-dropdown click-only">
+                                                    <a href="#"> Croset Fabrics</a>
+                                                    <ul class="aside-submenu">
+                                                        <li><a href="croset.html">Croset</a> </li>
+                                                        <li><a href="russal.html">Russal</a> </li>
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                        </aside>
                             <aside class="widget widget-download with-title">
                                 <div class="d-flex download_block">
                                     <div class="download_img_icon">
@@ -827,6 +945,27 @@
     <!-- Javascript end-->
 
 </body>
+
+<script>
+document.querySelectorAll('.widget-nav-menu li.click-only > a')
+.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const li = this.closest('li');
+
+        // close others
+        document.querySelectorAll('.widget-nav-menu li.click-only')
+            .forEach(item => {
+                if (item !== li) item.classList.remove('open');
+            });
+
+        li.classList.toggle('open');
+    });
+});
+</script>
+
 
 <!-- Mirrored from themetechmount.com/html/fablio/fabric-printing.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Nov 2025 10:57:58 GMT -->
 
